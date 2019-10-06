@@ -13286,7 +13286,7 @@ $$\begin{equation} \frac{x_{2, ss}/x_{1, ss}}{x_{2, eq}/x_{1, eq}} = \frac{1}{1 
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">t0</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">tf</span> <span class="o">=</span> <span class="mi">150</span>
 
-<span class="n">sim</span> <span class="o">=</span> <span class="n">Simulation</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">Simulation</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">variable_step_size</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">conc_sol</span><span class="p">,</span> <span class="n">flux_sol</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">),</span>
                                   <span class="n">interpolate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                                   <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -13575,6 +13575,7 @@ $$\begin{equation} x_{1, ss} - \frac{x_{2, ss}}{K_1} = x_{1, ss} - \frac{x_{2, s
 Setting simulation values for &#39;Linear_Reversible_Open&#39;
 Getting time points
 Simulating &#39;Linear_Reversible_Open&#39;
+{&#39;[x1]&#39;: 0.0, &#39;[x2]&#39;: 0.0, &#39;b1&#39;: 0.0, &#39;v1&#39;: 0.0, &#39;b2&#39;: 0.0}
 Found steady state for &#39;Linear_Reversible_Open&#39;.
 Updating &#39;Linear_Reversible_Open&#39; values
 Adding &#39;Linear_Reversible_Open&#39; simulation solutions to output
@@ -13754,7 +13755,7 @@ $$\begin{equation} b_1 \leq b_{1, max} = k_2e_t = v_m \tag{6.23} \end{equation}$
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">t0</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">tf</span> <span class="o">=</span> <span class="mf">2e3</span>
 
-<span class="n">sim</span> <span class="o">=</span> <span class="n">Simulation</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">Simulation</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">variable_step_size</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="c1"># Simulate model with disturbance from steady state</span>
 <span class="n">conc_sol</span><span class="p">,</span> <span class="n">flux_sol</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span>
     <span class="n">model</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">),</span> <span class="n">perturbations</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;kf_b1&quot;</span><span class="p">:</span> <span class="mf">0.04</span><span class="p">},</span>

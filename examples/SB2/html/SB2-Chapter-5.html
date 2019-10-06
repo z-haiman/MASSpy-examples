@@ -13307,7 +13307,7 @@ $$\begin{equation} \frac{dp}{dt} = \frac{k_2e_0s}{K_d + s} \tag{5.12} \end{equat
 <span class="n">model</span><span class="o">.</span><span class="n">update_initial_conditions</span><span class="p">({</span><span class="n">s</span><span class="p">:</span> <span class="n">s0</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span> <span class="n">e0</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span>
 
 <span class="c1"># Solve</span>
-<span class="n">MM_simulation</span> <span class="o">=</span> <span class="n">Simulation</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">MM_simulation</span> <span class="o">=</span> <span class="n">Simulation</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">variable_step_size</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">MM_simulation</span><span class="o">.</span><span class="n">variable_step_size</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">conc_sol</span><span class="p">,</span> <span class="n">flux_sol</span> <span class="o">=</span> <span class="n">MM_simulation</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">))</span>
 </pre></div>
@@ -13493,7 +13493,7 @@ $$\begin{equation} a = k_2/k_{-1}, \ b = e_0/K_m, \ c = s_0/K_m \tag{5.13} \end{
 <span class="n">model</span><span class="o">.</span><span class="n">update_initial_conditions</span><span class="p">({</span><span class="n">s</span><span class="p">:</span> <span class="n">s0</span><span class="p">})</span>
 
 <span class="c1"># Solve</span>
-<span class="n">MM_simulation</span> <span class="o">=</span> <span class="n">Simulation</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">MM_simulation</span> <span class="o">=</span> <span class="n">Simulation</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">variable_step_size</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">conc_sol</span><span class="p">,</span> <span class="n">flux_sol</span> <span class="o">=</span> <span class="n">MM_simulation</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">))</span>
 </pre></div>
 

@@ -13481,7 +13481,7 @@ add_metabolites(self, metabolites_to_add, combine=True, reversibly=True)
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;MassMetabolite x1 at 0x1262a53c8&gt;]</pre>
+<pre>[&lt;MassMetabolite x1 at 0x1212a8278&gt;]</pre>
 </div>
 
 </div>
@@ -13514,7 +13514,7 @@ add_metabolites(self, metabolites_to_add, combine=True, reversibly=True)
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;MassMetabolite x2 at 0x1262a5390&gt;]</pre>
+<pre>[&lt;MassMetabolite x2 at 0x1212a8240&gt;]</pre>
 </div>
 
 </div>
@@ -13682,9 +13682,9 @@ add_metabolites(self, metabolites_to_add, combine=True, reversibly=True)
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;MassReaction v1 at 0x1262a5358&gt;,
- &lt;MassReaction v2 at 0x1262a5470&gt;,
- &lt;MassReaction v3 at 0x1262a55f8&gt;]</pre>
+<pre>[&lt;MassReaction v1 at 0x1212a8208&gt;,
+ &lt;MassReaction v2 at 0x1212a8320&gt;,
+ &lt;MassReaction v3 at 0x1212a8438&gt;]</pre>
 </div>
 
 </div>
@@ -13717,10 +13717,10 @@ add_metabolites(self, metabolites_to_add, combine=True, reversibly=True)
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;MassMetabolite x1 at 0x1262a53c8&gt;,
- &lt;MassMetabolite x2 at 0x1262a5390&gt;,
- &lt;MassMetabolite x3 at 0x1262a5400&gt;,
- &lt;MassMetabolite x4 at 0x1262a5438&gt;]</pre>
+<pre>[&lt;MassMetabolite x1 at 0x1212a8278&gt;,
+ &lt;MassMetabolite x2 at 0x1212a8240&gt;,
+ &lt;MassMetabolite x3 at 0x1212a82b0&gt;,
+ &lt;MassMetabolite x4 at 0x1212a82e8&gt;]</pre>
 </div>
 
 </div>
@@ -14122,7 +14122,7 @@ x4: kf_v3*x3(t)
                 <tr>
                     <td><strong>Name</strong></td><td>Model</td>
                 </tr><tr>
-                    <td><strong>Memory address</strong></td><td>0x01262ce828</td>
+                    <td><strong>Memory address</strong></td><td>0x01212bf630</td>
                 </tr><tr>
                     <td><strong>Stoichiometric Matrix</strong></td>
                     <td>4x3</td>
@@ -14250,7 +14250,7 @@ Boundary: {}
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&lt;MassMetabolite x1 at 0x1262a53c8&gt;: 1, &lt;MassMetabolite x2 at 0x1262a5390&gt;: 0}</pre>
+<pre>{&lt;MassMetabolite x1 at 0x1212a8278&gt;: 1, &lt;MassMetabolite x2 at 0x1212a8240&gt;: 0}</pre>
 </div>
 
 </div>
@@ -14292,10 +14292,10 @@ Boundary: {}
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&lt;MassMetabolite x1 at 0x1262a53c8&gt;: 1,
- &lt;MassMetabolite x2 at 0x1262a5390&gt;: 0,
- &lt;MassMetabolite x3 at 0x1262a5400&gt;: 0,
- &lt;MassMetabolite x4 at 0x1262a5438&gt;: 0}</pre>
+<pre>{&lt;MassMetabolite x1 at 0x1212a8278&gt;: 1,
+ &lt;MassMetabolite x2 at 0x1212a8240&gt;: 0,
+ &lt;MassMetabolite x3 at 0x1212a82b0&gt;: 0,
+ &lt;MassMetabolite x4 at 0x1212a82e8&gt;: 0}</pre>
 </div>
 
 </div>
@@ -14338,7 +14338,7 @@ Boundary: {}
 <div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sim</span> <span class="o">=</span> <span class="n">Simulation</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sim</span> <span class="o">=</span> <span class="n">Simulation</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">variable_step_size</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14356,6 +14356,17 @@ Boundary: {}
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre><span class="ansi-yellow-intense-fg">WARNING:</span> <span class="ansi-yellow-intense-fg">No compartments found in model. Therefore creating compartment &#39;compartment&#39; for entire model.</span>
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Successfully loaded MassModel &#39;Model&#39; into RoadRunner.
 </pre>
 </div>
 </div>
@@ -14380,6 +14391,7 @@ Boundary: {}
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">t0</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">tf</span> <span class="o">=</span> <span class="mf">1e6</span>
 <span class="n">numpoints</span> <span class="o">=</span> <span class="mf">1e3</span> <span class="o">+</span> <span class="mi">1</span>
+
 <span class="n">conc_sol</span><span class="p">,</span> <span class="n">flux_sol</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span>
     <span class="n">model</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="n">numpoints</span><span class="p">),</span> <span class="n">interpolate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -14453,10 +14465,10 @@ Updating stored solutions
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>x1 &lt;scipy.interpolate.interpolate.interp1d object at 0x1263be4a8&gt;
-x2 &lt;scipy.interpolate.interpolate.interp1d object at 0x1263be598&gt;
-x3 &lt;scipy.interpolate.interpolate.interp1d object at 0x1263be8b8&gt;
-x4 &lt;scipy.interpolate.interpolate.interp1d object at 0x1263bea48&gt;
+<pre>x1 &lt;scipy.interpolate.interpolate.interp1d object at 0x1213ad4f8&gt;
+x2 &lt;scipy.interpolate.interpolate.interp1d object at 0x1212a6958&gt;
+x3 &lt;scipy.interpolate.interpolate.interp1d object at 0x1213ad958&gt;
+x4 &lt;scipy.interpolate.interpolate.interp1d object at 0x1213ad9f8&gt;
 </pre>
 </div>
 </div>
@@ -14496,9 +14508,9 @@ x4 &lt;scipy.interpolate.interpolate.interp1d object at 0x1263bea48&gt;
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>v1 &lt;scipy.interpolate.interpolate.interp1d object at 0x1263be2c8&gt;
-v2 &lt;scipy.interpolate.interpolate.interp1d object at 0x1263be458&gt;
-v3 &lt;scipy.interpolate.interpolate.interp1d object at 0x1263be958&gt;
+<pre>v1 &lt;scipy.interpolate.interpolate.interp1d object at 0x1213ad318&gt;
+v2 &lt;scipy.interpolate.interpolate.interp1d object at 0x1213ad4a8&gt;
+v3 &lt;scipy.interpolate.interpolate.interp1d object at 0x1213ad598&gt;
 </pre>
 </div>
 </div>
@@ -14864,7 +14876,7 @@ v3: [4.96651050e-11 4.67952432e-09 2.81873928e-07 4.41437817e-06
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>x1 &lt;scipy.interpolate.interpolate.interp1d object at 0x1263be4a8&gt;
+<pre>x1 &lt;scipy.interpolate.interpolate.interp1d object at 0x1213ad4f8&gt;
 </pre>
 </div>
 </div>
@@ -14896,8 +14908,8 @@ v3: [4.96651050e-11 4.67952432e-09 2.81873928e-07 4.41437817e-06
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>v1 &lt;scipy.interpolate.interpolate.interp1d object at 0x1263be2c8&gt;
-v2 &lt;scipy.interpolate.interpolate.interp1d object at 0x1263be458&gt;
+<pre>v1 &lt;scipy.interpolate.interpolate.interp1d object at 0x1213ad318&gt;
+v2 &lt;scipy.interpolate.interpolate.interp1d object at 0x1213ad4a8&gt;
 </pre>
 </div>
 </div>
@@ -15032,7 +15044,7 @@ v2 &lt;scipy.interpolate.interpolate.interp1d object at 0x1263be458&gt;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;scipy.interpolate.interpolate.interp1d at 0x1263be9f8&gt;</pre>
+<pre>&lt;scipy.interpolate.interpolate.interp1d at 0x1213adb88&gt;</pre>
 </div>
 
 </div>
@@ -15448,9 +15460,9 @@ v2 &lt;scipy.interpolate.interpolate.interp1d object at 0x1263be458&gt;
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>p1 &lt;scipy.interpolate.interpolate.interp1d object at 0x12f984818&gt;
-p2 &lt;scipy.interpolate.interpolate.interp1d object at 0x12ad4f868&gt;
-p3 &lt;scipy.interpolate.interpolate.interp1d object at 0x12acc3b38&gt;
+<pre>p1 &lt;scipy.interpolate.interpolate.interp1d object at 0x125d3cf48&gt;
+p2 &lt;scipy.interpolate.interpolate.interp1d object at 0x125afdea8&gt;
+p3 &lt;scipy.interpolate.interpolate.interp1d object at 0x12556d098&gt;
 </pre>
 </div>
 </div>
@@ -15539,7 +15551,7 @@ p3 &lt;scipy.interpolate.interpolate.interp1d object at 0x12acc3b38&gt;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;v_net&#39;: &lt;scipy.interpolate.interpolate.interp1d at 0x12a9fbd18&gt;}</pre>
+<pre>{&#39;v_net&#39;: &lt;scipy.interpolate.interpolate.interp1d at 0x125b9bdb8&gt;}</pre>
 </div>
 
 </div>
