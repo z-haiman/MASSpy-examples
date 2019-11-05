@@ -2,10 +2,10 @@
 
 bash_source_dir=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 
-cp_dir="$bash_source_dir/examples/catalytic_potential/"
-rbc_wck_dir="$bash_source_dir/examples/RBC_WholeCellKinetics/"
-sb2_dir="$bash_source_dir/examples/SB2/"
-test_dir="$bash_source_dir/test_data"
+cp_dir="$bash_source_dir/../examples/Catalytic_Potential/"
+rbc_wck_dir="$bash_source_dir/../examples/RBC_WholeCellKinetics/"
+sb2_dir="$bash_source_dir/../examples/SB2/"
+test_dir="$bash_source_dir/../test_data"
 
 test_model_dir="$test_dir/models"
 test_maps_dir="$test_dir/maps"
